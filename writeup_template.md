@@ -23,8 +23,13 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps.
 
+* convert to YCrCb colorspace, to avoid effect of changing luminiscity, e.g; shade vs direct sunlight.
+* I smoothed down the noise using gaussian blur
+* I filtered the image based on color
+* I clipped the upper half off the image
+* I detected lines using hough transform
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
